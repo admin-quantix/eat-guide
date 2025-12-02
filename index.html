@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,74 +19,89 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
         .nav-btn {
             @apply px-4 py-2 rounded-md text-sm font-medium text-amber-100 hover:bg-amber-700 transition-colors;
         }
+
         .nav-btn.active {
             @apply bg-white text-amber-900 shadow-inner;
         }
+
         .page-content {
             @apply bg-white p-6 md:p-8 rounded-2xl shadow-lg;
         }
+
         .wizard-nav-btn {
             @apply w-12 h-12 md:w-full md:h-auto md:px-6 md:py-4 rounded-full md:rounded-lg text-lg md:text-base font-semibold border-2 border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-white transition-all flex items-center justify-center md:justify-start;
         }
-		
+
         .wizard-nav-btn.active {
             @apply bg-amber-800 text-white shadow-md;
         }
+
         .wizard-step {
             @apply p-1;
         }
+
         .mock-ui {
             @apply border-2 border-dashed border-stone-300 bg-stone-50 rounded-lg p-6 mt-6 flex flex-col items-center;
         }
+
         .mock-ui-btn {
             @apply w-full max-w-xs bg-white border border-stone-300 text-stone-700 px-4 py-3 rounded-full shadow-sm text-center font-medium my-2;
         }
+
         .mock-logo {
             @apply w-24 h-24 rounded-full bg-amber-800 border-4 border-amber-100 flex items-center justify-center text-white text-4xl font-bold mb-6 shadow-lg;
         }
+
         .mock-qr {
             @apply w-48 h-48 bg-stone-800 p-3 rounded-lg flex flex-wrap;
         }
+
         .mock-qr-dot {
             @apply w-3 h-3 bg-white;
         }
-        details > summary {
+
+        details>summary {
             list-style: none;
             cursor: pointer;
         }
-        details > summary::-webkit-details-marker {
+
+        details>summary::-webkit-details-marker {
             display: none;
         }
-        details > summary::before {
+
+        details>summary::before {
             content: '+';
             @apply mr-3 font-bold text-amber-800;
         }
-        details[open] > summary::before {
+
+        details[open]>summary::before {
             content: '−';
         }
-		
-		.wizard-nav-btn {
-            text-align:left;
-			padding: 3px;
+
+        .wizard-nav-btn {
+            text-align: left;
+            padding: 3px;
         }
-		
-		.nav-btn.active {
-			font-weight: bold;
-			}
-		
+
+        .nav-btn.active {
+            font-weight: bold;
+        }
+
         .wizard-nav-btn.active {
 
-			background-color: #fff;
+            background-color: #fff;
         }
     </style>
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body class="bg-orange-50 text-stone-800 min-h-screen">
 
     <header class="bg-amber-800 text-white shadow-md sticky top-0 z-50">
@@ -94,8 +110,9 @@
             <div id="nav-links" class="flex space-x-2 sm:space-x-4">
                 <button class="nav-btn active" data-target="page-overview">Overview</button>
                 <button class="nav-btn" data-target="page-how-to">How to Use</button>
+                <button class="nav-btn" data-target="page-preorder">Pre-order</button>
                 <button class="nav-btn" data-target="page-faq">FAQ & Rules</button>
-				<button class="nav-btn" data-target="page-feedback">Feedback</button>
+                <button class="nav-btn" data-target="page-feedback">Feedback</button>
             </div>
         </nav>
     </header>
@@ -103,43 +120,48 @@
     <main class="container mx-auto p-4 sm:p-6 lg:p-8">
 
         <section id="page-overview" class="page-content">
-            <h2 class="text-3xl font-bold text-amber-900 mb-4 text-center sm:text-center">Welcome to the EAT Program!</h2>
-			<p class="mb-4 text-center sm:text-center"><img src="img/New Eat Logo.png" alt="Eat" width="200" height="200" class="block mx-auto sm:inline sm:mx-0"></p>
-            <p class="text-lg text-stone-600 mb-10">This guide will help you understand and use the EAT (Employee Appreciation Tokens) program. EAT is an internal program designed to provide all staff and members of the SG organization with  "Tokens" to redeem food and beverages from the on-site GnT cafe. Only whitelisted email will be able to login to the app.</p>
+            <h2 class="text-3xl font-bold text-amber-900 mb-4 text-center sm:text-center">Welcome to the EAT Program!
+            </h2>
+            <p class="mb-4 text-center sm:text-center"><img src="img/New Eat Logo.png" alt="Eat" width="200"
+                    height="200" class="block mx-auto sm:inline sm:mx-0"></p>
+            <p class="text-lg text-stone-600 mb-10">This guide will help you understand and use the EAT (Employee
+                Appreciation Tokens) program. EAT is an internal program designed to provide all staff and members of
+                the SG organization with "Tokens" to redeem food and beverages from the on-site GnT cafe. Only
+                whitelisted email will be able to login to the app.</p>
 
-<div class="md:flex md:justify-center md:items-start md:gap-20 mb-6">
+            <div class="md:flex md:justify-center md:items-start md:gap-20 mb-6">
 
-  <div class="flex flex-col items-center mb-10">
-	<p  class="mb-4">
-      <img src="img/qr-google.png" alt="Gnt Eat" width="230" height="230">
-    </p>
-    <p>
-      <a href="https://play.google.com/store/apps/details?id=com.quantix.eat">
-        <img src="img/google-play.png" alt="Gnt Eat" width="230" height="69">
-      </a>
-    </p>
-    
-  </div>
+                <div class="flex flex-col items-center mb-10">
+                    <p class="mb-4">
+                        <img src="img/qr-google.png" alt="Gnt Eat" width="230" height="230">
+                    </p>
+                    <p>
+                        <a href="https://play.google.com/store/apps/details?id=com.quantix.eat">
+                            <img src="img/google-play.png" alt="Gnt Eat" width="230" height="69">
+                        </a>
+                    </p>
 
-  <div class="flex flex-col items-center">
-	<p class="mb-4">
-      <img src="img/qr-apple.png" alt="Gnt Eat" width="230" height="230">
-    </p>
-    <p>
-      <a href="https://apps.apple.com/us/app/gnt-eat/id6752589484">
-        <img src="img/apple-store.png" alt="Gnt Eat" width="230" height="69">
-      </a>
-    </p>
-    
-  </div>
+                </div>
 
-</div> 
-			
+                <div class="flex flex-col items-center">
+                    <p class="mb-4">
+                        <img src="img/qr-apple.png" alt="Gnt Eat" width="230" height="230">
+                    </p>
+                    <p>
+                        <a href="https://apps.apple.com/us/app/gnt-eat/id6752589484">
+                            <img src="img/apple-store.png" alt="Gnt Eat" width="230" height="69">
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
                     <h3 class="text-xl font-semibold text-amber-900 mb-3">How It Works</h3>
                     <ul class="list-disc list-inside space-y-2 text-stone-700">
-                        <li>You receive a monthly allowance of free  tokens.</li>
+                        <li>You receive a monthly allowance of free tokens.</li>
                         <li>You use the EAT mobile app to place all orders.</li>
                         <li>Tokens are used as payment for items from the GnT cafe.</li>
                         <li>The app manages your balance, orders, and pickups.</li>
@@ -148,9 +170,11 @@
                 <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
                     <h3 class="text-xl font-semibold text-amber-900 mb-3">Key Things to Know</h3>
                     <ul class="list-disc list-inside space-y-2 text-stone-700">
-                        <li><strong>Tokens Expire:</strong> Your token balance is valid for a limited time and will refresh each month. Use them before they expire!</li>
+                        <li><strong>Tokens Expire:</strong> Your token balance is valid for a limited time and will
+                            refresh each month. Use them before they expire!</li>
                         <li><strong>No Cash Top-Ups:</strong> You cannot add money or buy more tokens.</li>
-                        <li><strong>Personal Use Only:</strong> Tokens are for your own use and cannot be used to sell items.</li>
+                        <li><strong>Personal Use Only:</strong> Tokens are for your own use and cannot be used to sell
+                            items.</li>
                         <li><strong>No Direct Orders:</strong> All orders must be placed through the mobile app.</li>
                     </ul>
                 </div>
@@ -159,15 +183,18 @@
 
         <section id="page-how-to" class="page-content hidden">
             <h2 class="text-3xl font-bold text-amber-900 mb-4">How to Use the App: Step-by-Step</h2>
-            <p class="text-lg text-stone-600 mb-8">Follow this guide to learn the entire process, from logging in for the first time to picking up your order. Click on a step to see the details.</p>
-            
+            <p class="text-lg text-stone-600 mb-8">Follow this guide to learn the entire process, from logging in for
+                the first time to picking up your order. Click on a step to see the details.</p>
+
             <div class="flex flex-col md:flex-row gap-6 md:gap-8">
-                <nav id="wizard-nav" class="flex md:flex-col flex-row flex-wrap justify-center md:justify-start md:w-1/4 gap-2">
+                <nav id="wizard-nav"
+                    class="flex md:flex-col flex-row flex-wrap justify-center md:justify-start md:w-1/4 gap-2">
                     <button class="wizard-nav-btn active" data-target="step-1">
                         <span class="md:hidden">Step 1</span><span class="hidden md:inline">Step 1: Log In</span>
                     </button>
                     <button class="wizard-nav-btn" data-target="step-2">
-                        <span class="md:hidden">Step 2</span><span class="hidden md:inline">Step 2: Choose Counter</span>
+                        <span class="md:hidden">Step 2</span><span class="hidden md:inline">Step 2: Choose
+                            Counter</span>
                     </button>
                     <button class="wizard-nav-btn" data-target="step-3">
                         <span class="md:hidden">Step 3</span><span class="hidden md:inline">Step 3: Select Food</span>
@@ -186,13 +213,16 @@
                 <div id="wizard-content" class="md:w-3/4">
                     <div id="step-1" class="wizard-step">
                         <h3 class="text-2xl font-semibold text-amber-900 mb-3">Step 1: Log In</h3>
-                        <p class="text-stone-700 mb-4">Sign in with your work email using Single Sign-On (SSO). Only whitelisted emails can access the app and make an order. Please inform HR is you are unable to login to app.</p>
+                        <p class="text-stone-700 mb-4">Sign in with your work email using Single Sign-On (SSO). Only
+                            whitelisted emails can access the app and make an order. Please inform HR is you are unable
+                            to login to app.</p>
                         <p class="mb-4"><img src="img/page-01.jpg" alt="EAT" width="300" height="668"></p>
                     </div>
 
                     <div id="step-2" class="wizard-step hidden">
                         <h3 class="text-2xl font-semibold text-amber-900 mb-3">Step 2: Choose Counter</h3>
-                        <p class="text-stone-700 mb-4">After logging in, you'll see your token balance and expiry. Select one of the two counters. Note that they have different opening hours.</p>
+                        <p class="text-stone-700 mb-4">After logging in, you'll see your token balance and expiry.
+                            Select one of the two counters. Note that they have different opening hours.</p>
                         <div class="grid sm:grid-cols-2 gap-4 mb-4">
                             <div class="bg-stone-50 border rounded-lg p-4">
                                 <h4 class="font-bold text-lg">Coffee Counter</h4>
@@ -203,59 +233,73 @@
                                 <p class="text-sm">Monday-Friday: 5:00pm – 9:30pm</p>
                             </div>
                         </div>
-						<p class="mb-4"><img src="img/page-02.jpg" alt="EAT" width="300" height="668"></p>
+                        <p class="mb-4"><img src="img/page-02.jpg" alt="EAT" width="300" height="668"></p>
                     </div>
-                    
+
                     <div id="step-3" class="wizard-step hidden">
                         <h3 class="text-2xl font-semibold text-amber-900 mb-3">Step 3: Select Food & Drinks</h3>
-                        <p class="text-stone-700 mb-4">Use the sidebar to navigate categories (Coffee, Non-Coffee, Tea, etc.). Tap on an item to see details and add it to your cart. You will see the token cost for each item.</p>
+                        <p class="text-stone-700 mb-4">Use the sidebar to navigate categories (Coffee, Non-Coffee, Tea,
+                            etc.). Tap on an item to see details and add it to your cart. You will see the token cost
+                            for each item.</p>
                         <p class="mb-4"><img src="img/page-03.jpg" alt="EAT" width="300" height="668"></p>
                     </div>
 
                     <div id="step-4" class="wizard-step hidden">
                         <h3 class="text-2xl font-semibold text-amber-900 mb-3">Step 4: Check Out</h3>
-                        <p class="text-stone-700 mb-4">Once you're ready, go to your cart to check out. Here you can:</p>
+                        <p class="text-stone-700 mb-4">Once you're ready, go to your cart to check out. Here you can:
+                        </p>
                         <ul class="list-disc list-inside space-y-2 mb-4">
-                            <li>View your <strong>Order Summary</strong> and make last-minute changes (edit quantity, delete items).</li>
-                            <li>Select a <strong>Pickup Time Slot</strong>. The time slots are color-coded to show how busy they are.
-							<div class="flex space-x-2 justify-left mt-2">
-                            <span class="px-3 py-1 text-xs rounded-full bg-white text-green-800">&lt;20min</span>
-                            <span class="px-3 py-1 text-xs rounded-full bg-yellow-200 text-yellow-800">20-50min</span>
-                            <span class="px-3 py-1 text-xs rounded-full bg-red-300 text-red-800">&gt;50min</span>
-                            <span class="px-3 py-1 text-xs rounded-full bg-red-600 text-white">Full</span>
-                        </div>
-							
-							</li>
-							
-                            <li><strong>Place Order</strong>. Your order is then sent to the EAT system, and your tokens are deducted.</li>
+                            <li>View your <strong>Order Summary</strong> and make last-minute changes (edit quantity,
+                                delete items).</li>
+                            <li>Select a <strong>Pickup Time Slot</strong>. The time slots are color-coded to show how
+                                busy they are.
+                                <div class="flex space-x-2 justify-left mt-2">
+                                    <span
+                                        class="px-3 py-1 text-xs rounded-full bg-white text-green-800">&lt;20min</span>
+                                    <span
+                                        class="px-3 py-1 text-xs rounded-full bg-yellow-200 text-yellow-800">20-50min</span>
+                                    <span
+                                        class="px-3 py-1 text-xs rounded-full bg-red-300 text-red-800">&gt;50min</span>
+                                    <span class="px-3 py-1 text-xs rounded-full bg-red-600 text-white">Full</span>
+                                </div>
+
+                            </li>
+
+                            <li><strong>Place Order</strong>. Your order is then sent to the EAT system, and your tokens
+                                are deducted.</li>
                         </ul>
-                        
-						
-						<p class="mb-4"><img src="img/page-06.jpg" alt="EAT" width="300" height="668"></p>
+
+
+                        <p class="mb-4"><img src="img/page-06.jpg" alt="EAT" width="300" height="668"></p>
                     </div>
 
                     <div id="step-5" class="wizard-step hidden">
                         <h3 class="text-2xl font-semibold text-amber-900 mb-3">Step 5: Get Notified</h3>
-                        <p class="text-stone-700 mb-4">You will receive push notifications on your phone as your order progresses. You can also check the status in the "Order" tab of the app.</p>
+                        <p class="text-stone-700 mb-4">You will receive push notifications on your phone as your order
+                            progresses. You can also check the status in the "Order" tab of the app.</p>
                         <ul class="list-disc list-inside space-y-3 mb-4">
-                            <li><strong>Preparing:</strong> Café staff have accepted your order and will start preparing it.</li>
-                            <li><strong>Modify Order:</strong> If an item is out of stock, it will be removed from your order. The rest will be processed, and tokens for the removed item will be refunded.</li>
+                            <li><strong>Preparing:</strong> Café staff have accepted your order and will start preparing
+                                it.</li>
+                            <li><strong>Modify Order:</strong> If an item is out of stock, it will be removed from your
+                                order. The rest will be processed, and tokens for the removed item will be refunded.
+                            </li>
                             <li><strong>Completed:</strong> Your order is ready for pickup!</li>
                         </ul>
-						<p class="mb-4"><img src="img/page-07.jpg" alt="EAT" width="300" height="152"></p>
-						<p class="mb-4"><img src="img/page-08.jpg" alt="EAT" width="300" height="668"></p>
+                        <p class="mb-4"><img src="img/page-07.jpg" alt="EAT" width="300" height="152"></p>
+                        <p class="mb-4"><img src="img/page-08.jpg" alt="EAT" width="300" height="668"></p>
                     </div>
 
                     <div id="step-6" class="wizard-step hidden">
                         <h3 class="text-2xl font-semibold text-amber-900 mb-3">Step 6: Pick Up Your Order</h3>
-                        <p class="text-stone-700 mb-4">When your order is ready ("Completed"), go to the pickup location on the 32nd floor. </p>
+                        <p class="text-stone-700 mb-4">When your order is ready ("Completed"), go to the pickup location
+                            on the 32nd floor. </p>
                         <ol class="list-decimal list-inside space-y-2 mb-4">
                             <li>Go to the "Order" page in your app.</li>
                             <li>Find your current order and select <strong>"QR for Pickup"</strong>.</li>
                             <li>Scan the QR code at the scanner at the counter.</li>
                             <li>Pick up your order and enjoy!</li>
                         </ol>
-						<p class="mb-4"><img src="img/page-09a.jpg" alt="EAT" width="300" height="277"></p>
+                        <p class="mb-4"><img src="img/page-09a.jpg" alt="EAT" width="300" height="277"></p>
                         <p class="mb-4"><img src="img/page-09.jpg" alt="EAT" width="300" height="668"></p>
                     </div>
                 </div>
@@ -264,85 +308,255 @@
 
         <section id="page-faq" class="page-content hidden">
             <h2 class="text-3xl font-bold text-amber-900 mb-6">Frequently Asked Questions & Rules</h2>
-            
+
             <h3 class="text-2xl font-semibold text-amber-900 mb-4 border-b pb-2">FAQs</h3>
             <div class="space-y-4 mb-8">
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
                     <summary class="font-semibold text-lg text-stone-800"> How do I log in for the first time?</summary>
-                    <p class="mt-3 text-stone-700">You can log in using your company email through Single Sign-On (SSO) with Google, Apple, or Microsoft. Just choose your provider on the login screen. If you are unable to login, please inform your HR.</p>
+                    <p class="mt-3 text-stone-700">You can log in using your company email through Single Sign-On (SSO)
+                        with Google, Apple, or Microsoft. Just choose your provider on the login screen. If you are
+                        unable to login, please inform your HR.</p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
-                    <summary class="font-semibold text-lg text-stone-800"> How do I know when my order is ready?</summary>
-                    <p class="mt-3 text-stone-700">You can track your order's progress in the "My Orders" section of the app. The status will update from "Sent" to "Preparing," and finally to "Ready for Pickup." You'll also receive a push notification for the "Preparing" and "Ready for Pickup" stages.</p>
+                    <summary class="font-semibold text-lg text-stone-800"> How do I know when my order is ready?
+                    </summary>
+                    <p class="mt-3 text-stone-700">You can track your order's progress in the "My Orders" section of the
+                        app. The status will update from "Sent" to "Preparing," and finally to "Ready for Pickup."
+                        You'll also receive a push notification for the "Preparing" and "Ready for Pickup" stages.</p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
                     <summary class="font-semibold text-lg text-stone-800"> What happen if my token expired?</summary>
-                    <p class="mt-3 text-stone-700">All Employee Appreciation Tokens are valid for a limited time. The expiration countdown is always visible on your app's home screen. Unused tokens will expire and be forfeited. However, your token will refresh each month.</p>
+                    <p class="mt-3 text-stone-700">All Employee Appreciation Tokens are valid for a limited time. The
+                        expiration countdown is always visible on your app's home screen. Unused tokens will expire and
+                        be forfeited. However, your token will refresh each month.</p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
                     <summary class="font-semibold text-lg text-stone-800"> I want to cancel or modify order?</summary>
-                    <p class="mt-3 text-stone-700">You cannot modify your order, but you can <strong>cancel</strong> your order under the “Order” page <strong>if</strong> the café staff haven’t “accepted” your order yet. When the order has been accepted, you cannot make any changes.</p>
+                    <p class="mt-3 text-stone-700">You cannot modify your order, but you can <strong>cancel</strong>
+                        your order under the “Order” page <strong>if</strong> the café staff haven’t “accepted” your
+                        order yet. When the order has been accepted, you cannot make any changes.</p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
                     <summary class="font-semibold text-lg text-stone-800"> Can I topup token with cash?</summary>
                     <p class="mt-3 text-stone-700">Currently we do not accept any topup cash transaction.</p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
-                    <summary class="font-semibold text-lg text-stone-800"> I can’t find my order at the counter. What do I do?</summary>
-                    <p class="mt-3 text-stone-700">Please make sure your order status is “Ready for Pickup”. If you still can’t find your order, please inform café staff, they will check and will redo the order if needed.</p>
+                    <summary class="font-semibold text-lg text-stone-800"> I can’t find my order at the counter. What do
+                        I do?</summary>
+                    <p class="mt-3 text-stone-700">Please make sure your order status is “Ready for Pickup”. If you
+                        still can’t find your order, please inform café staff, they will check and will redo the order
+                        if needed.</p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
-                    <summary class="font-semibold text-lg text-stone-800"> Can I order directly thru the café counter?</summary>
-                    <p class="mt-3 text-stone-700">We don’t accept direct order, please use your mobile app to order.</p>
+                    <summary class="font-semibold text-lg text-stone-800"> Can I order directly thru the café counter?
+                    </summary>
+                    <p class="mt-3 text-stone-700">We don’t accept direct order, please use your mobile app to order.
+                    </p>
                 </details>
                 <details class="bg-white p-4 rounded-lg shadow-sm border">
-                    <summary class="font-semibold text-lg text-stone-800"> Can I pickup the order on behalf of my colleague(s)?</summary>
-                    <p class="mt-3 text-stone-700">Yes you can. Take a screenshot of your colleague(s) Pickup QR code and scan the QR code before you pickup the items.</p>
+                    <summary class="font-semibold text-lg text-stone-800"> Can I pickup the order on behalf of my
+                        colleague(s)?</summary>
+                    <p class="mt-3 text-stone-700">Yes you can. Take a screenshot of your colleague(s) Pickup QR code
+                        and scan the QR code before you pickup the items.</p>
                 </details>
-				<details class="bg-white p-4 rounded-lg shadow-sm border">
-                    <summary class="font-semibold text-lg text-stone-800"> I forgot to pickup order, can i have a refund?</summary>
-                    <p class="mt-3 text-stone-700">All accepted order are not refundable. Uncollected item will be discarded by end of the day.</p>
+                <details class="bg-white p-4 rounded-lg shadow-sm border">
+                    <summary class="font-semibold text-lg text-stone-800"> I forgot to pickup order, can i have a
+                        refund?</summary>
+                    <p class="mt-3 text-stone-700">All accepted order are not refundable. Uncollected item will be
+                        discarded by end of the day.</p>
                 </details>
             </div>
 
             <h3 class="text-2xl font-semibold text-amber-900 mb-4 border-b pb-2">Rules & Regulations</h3>
             <div class="space-y-4">
-                 <details class="bg-white p-4 rounded-lg shadow-sm border">
+                <details class="bg-white p-4 rounded-lg shadow-sm border">
                     <summary class="font-semibold text-lg text-stone-800"> Personal Use</summary>
-                    <p class="mt-3 text-stone-700">Token if for your own usage, you cannot use the token to sell the item.</p>
+                    <p class="mt-3 text-stone-700">Token if for your own usage, you cannot use the token to sell the
+                        item.</p>
                 </details>
-                 <details class="bg-white p-4 rounded-lg shadow-sm border">
+                <details class="bg-white p-4 rounded-lg shadow-sm border">
                     <summary class="font-semibold text-lg text-stone-800"> Compliance & Misuse</summary>
-                    <p class="mt-3 text-stone-700">Management reserves the right to review order histories to ensure compliance with company policies (e.g., regarding the purchase of alcoholic beverages during work hours). Misuse of the program may result in suspension of access.</p>
+                    <p class="mt-3 text-stone-700">Management reserves the right to review order histories to ensure
+                        compliance with company policies (e.g., regarding the purchase of alcoholic beverages during
+                        work hours). Misuse of the program may result in suspension of access.</p>
                 </details>
             </div>
         </section>
-		
-		 <section id="page-feedback" class="page-content hidden">
-            <h2 class="text-3xl font-bold text-amber-900 mb-4 text-center sm:text-center">We would like to listen to your Feedback</h2>
-			<p class="mb-4 text-center sm:text-center"><img src="img/New Eat Logo.png" alt="Eat" width="200" height="200" class="block mx-auto sm:inline sm:mx-0"></p>
-            <p class="text-lg text-stone-600 mb-10 text-center">Your feedback is very important to us.<br>Scan the QR code or click on the Google Form to send your feedback to us. Thank you!</p>
-			
-			<div class="md:flex md:justify-center md:items-start md:gap-20 mb-6">
 
-  <div class="flex flex-col items-center mb-10">
-	<p  class="mb-4">
-      <img src="img/feedback-qr.png" alt="Gnt Eat Feedback" width="230" height="230">
-    </p>
-    <p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-poeRNrwNuFtNzY_r_oJmuawkJU6InY4WGwBeUHBORw1Q1A/viewform?usp=dialog">
-        <img src="img/googleform.jpg" alt="Gnt Eat" width="195" height="69">
-      </a>
-    </p>
-    
-  </div>
+        <section id="page-preorder" class="page-content hidden">
+            <h2 class="text-3xl font-bold text-amber-900 mb-6">Mobile App – Pre-order User Flow</h2>
 
-</div> 
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-amber-900 mb-2">Overview</h3>
+                <p class="text-stone-700">This guide explains how users can place Pre-orders using the Mobile App.</p>
+            </div>
 
-		</section>
+            <div class="space-y-8">
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+                    <h3 class="text-xl font-bold text-amber-900 mb-4">1. Logging In</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-stone-700">
+                        <li>Open the Mobile App. Log in using your account credentials.</li>
+                        <li>After successful login, the system navigates to the Home Screen.</li>
+                    </ol>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+                    <h3 class="text-xl font-bold text-amber-900 mb-4">2. Viewing Terminals</h3>
+                    <p class="text-stone-700 mb-2">On the Home Screen, users can see a list of terminals, which
+                        includes:</p>
+                    <ul class="list-disc list-inside space-y-1 text-stone-700 mb-4 ml-4">
+                        <li>Normal Terminals</li>
+                        <li>Pre-order Terminals</li>
+                    </ul>
+                    <div class="bg-white p-4 rounded border border-amber-100">
+                        <p class="font-semibold text-amber-800">Note:</p>
+                        <p class="text-sm text-stone-600">The system automatically generates the Pre-order terminal list
+                            based on the ordering window (opening and closing times) configured by the merchant on the
+                            web.</p>
+                    </div>
+                    <p class="mt-4"><img src="img/preorder1.jpg" alt="Pre-order Terminals" width="300"
+                            class="rounded-lg shadow-sm"></p>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+                    <h3 class="text-xl font-bold text-amber-900 mb-4">3. How to Place a Pre-order</h3>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-lg text-amber-800 mb-2">Step 1: Select a Pre-order Terminal</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-stone-700">
+                                <li>Tap on a Pre-order Terminal from the Home Screen.</li>
+                                <li>The system navigates to the Menu Screen for that terminal.</li>
+                            </ol>
+                            <p class="mt-4"><img src="img/preorder2.jpg" alt="Select Terminal" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg text-amber-800 mb-2">Step 2: Add Items to Cart</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-stone-700">
+                                <li>Browse the menu and select the items you want to pre-order.</li>
+                                <li>Tap <strong>Add to Cart</strong> for each item.</li>
+                                <li>You can continue adding more items from the menu before proceeding to checkout.</li>
+                            </ol>
+                            <p class="mt-4"><img src="img/preorder3.jpg" alt="Add to Cart" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg text-amber-800 mb-2">Step 3: Proceed to Checkout</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-stone-700">
+                                <li>Open the Cart to review all selected items.</li>
+                                <li>Tap on the Cart, The system then navigate to the Checkout screen.</li>
+                                <p class="my-2"><img src="img/preorder4.jpg" alt="Cart" width="300"
+                                        class="rounded-lg shadow-sm"></p>
+                                <li>Unlike normal orders, Pre-orders require a delivery location.</li>
+                                <li>Fill in the required delivery information.</li>
+                                <p class="my-2"><img src="img/preorder5.jpg" alt="Checkout" width="300"
+                                        class="rounded-lg shadow-sm"></p>
+                                <li>Tap <strong>Place Order</strong> to complete the Pre-order.</li>
+                            </ol>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg text-amber-800 mb-2">Step 4: Review Order</h4>
+                            <ul class="list-disc list-inside space-y-2 text-stone-700">
+                                <li>After placing the order, the system navigates to the Order Screen.</li>
+                                <li>Here, users can review the order details again. Orders that belong to pre-order will
+                                    be flagged as ‘Pre-order’.</li>
+                                <li>Users can still cancel the order or place another order as long as the ordering
+                                    window is still open.</li>
+                            </ul>
+                            <p class="mt-4"><img src="img/preorder6.jpg" alt="Review Order" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+                    <h3 class="text-xl font-bold text-amber-900 mb-4">Order Status Flow</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-amber-800">1. Sent</h4>
+                            <ul class="list-disc list-inside text-stone-700 ml-4">
+                                <li>The user has successfully placed an order within the ordering window.</li>
+                                <li>During this period, the user is allowed to cancel the order or place a new order.
+                                </li>
+                            </ul>
+                            <p class="mt-2 ml-4"><img src="img/preorder7.jpg" alt="Sent Status" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800">2. Preparing</h4>
+                            <ul class="list-disc list-inside text-stone-700 ml-4">
+                                <li>After the ordering window closes, the system automatically changes the order status
+                                    to Preparing.</li>
+                                <li>During this period, the user cannot place new orders or cancel existing orders.</li>
+                            </ul>
+                            <p class="mt-2 ml-4"><img src="img/preorder8.jpg" alt="Preparing Status" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800">3. Completed</h4>
+                            <ul class="list-disc list-inside text-stone-700 ml-4">
+                                <li>After the delivery is successfully completed and the clean-up hour passes, the
+                                    system automatically changes the order status to Completed.</li>
+                            </ul>
+                            <p class="mt-2 ml-4"><img src="img/preorder9.jpg" alt="Completed Status" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800">4. Rejected</h4>
+                            <ul class="list-disc list-inside text-stone-700 ml-4">
+                                <li>When terminal staff reject the order, the system automatically updates the order
+                                    status to Rejected.</li>
+                            </ul>
+                            <p class="mt-2 ml-4"><img src="img/preorder10.jpg" alt="Rejected Status" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-amber-800">5. Canceled</h4>
+                            <ul class="list-disc list-inside text-stone-700 ml-4">
+                                <li>When the user cancels the order, the system automatically updates the order status
+                                    to Canceled.</li>
+                            </ul>
+                            <p class="mt-2 ml-4"><img src="img/preorder11.jpg" alt="Canceled Status" width="300"
+                                    class="rounded-lg shadow-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-feedback" class="page-content hidden">
+            <h2 class="text-3xl font-bold text-amber-900 mb-4 text-center sm:text-center">We would like to listen to
+                your Feedback</h2>
+            <p class="mb-4 text-center sm:text-center"><img src="img/New Eat Logo.png" alt="Eat" width="200"
+                    height="200" class="block mx-auto sm:inline sm:mx-0"></p>
+            <p class="text-lg text-stone-600 mb-10 text-center">Your feedback is very important to us.<br>Scan the QR
+                code or click on the Google Form to send your feedback to us. Thank you!</p>
+
+            <div class="md:flex md:justify-center md:items-start md:gap-20 mb-6">
+
+                <div class="flex flex-col items-center mb-10">
+                    <p class="mb-4">
+                        <img src="img/feedback-qr.png" alt="Gnt Eat Feedback" width="230" height="230">
+                    </p>
+                    <p>
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSf-poeRNrwNuFtNzY_r_oJmuawkJU6InY4WGwBeUHBORw1Q1A/viewform?usp=dialog">
+                            <img src="img/googleform.jpg" alt="Gnt Eat" width="195" height="69">
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
-    
+
     <footer class="text-center p-6 mt-8 text-stone-500 text-sm">
         Green Needle Tech © 2025. All rights reserved.
     </footer>
@@ -351,7 +565,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('#nav-links .nav-btn');
             const pages = document.querySelectorAll('.page-content');
-            
+
             const wizardNavBtns = document.querySelectorAll('#wizard-nav .wizard-nav-btn');
             const wizardSteps = document.querySelectorAll('#wizard-content .wizard-step');
 
@@ -371,7 +585,7 @@
                     }
                 });
             }
-            
+
             function showStep(targetId) {
                 wizardSteps.forEach(step => {
                     step.classList.add('hidden');
@@ -407,4 +621,5 @@
     </script>
 
 </body>
+
 </html>
