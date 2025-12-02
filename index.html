@@ -569,6 +569,18 @@
             const wizardNavBtns = document.querySelectorAll('#wizard-nav .wizard-nav-btn');
             const wizardSteps = document.querySelectorAll('#wizard-content .wizard-step');
 
+            // Map page IDs to URL hashes
+            const pageMap = {
+                'page-overview': '#overview',
+                'page-how-to': '#how-to',
+                'page-preorder': '#pre-order',
+                'page-faq': '#faq',
+                'page-feedback': '#feedback'
+            };
+
+            // Reverse map for easy lookup
+            const hashToPageId = Object.fromEntries(Object.entries(pageMap).map(([k, v]) => [v, k]));
+
             function showPage(targetId) {
                 pages.forEach(page => {
                     page.classList.add('hidden');
@@ -584,6 +596,12 @@
                         link.classList.add('active');
                     }
                 });
+
+                // Update URL hash without scrolling
+                const hash = pageMap[targetId];
+                if (hash && window.location.hash !== hash) {
+                    history.pushState(null, null, hash);
+                }
             }
 
             function showStep(targetId) {
@@ -615,7 +633,23 @@
                 });
             });
 
-            showPage('page-overview');
+            // Handle initial load based on hash
+            function handleHashChange() {
+                const hash = window.location.hash;
+                const pageId = hashToPageId[hash];
+                if (pageId) {
+                    showPage(pageId);
+                } else {
+                    showPage('page-overview');
+                }
+            }
+
+            // Listen for hash changes (e.g. back/forward button)
+            window.addEventListener('hashchange', handleHashChange);
+
+            // Initial check
+            handleHashChange();
+
             showStep('step-1');
         });
     </script>
